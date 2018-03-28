@@ -38,9 +38,19 @@
     color: #383736;
     }
 
+  .container {
+      padding: 150px 100px;
+  }
+
   .container-1 {
       padding: 100px 100px;
   }
+
+  .countdown {
+  text-align: center;
+  font-size: 60px;
+  margin-top:0px;
+}
 
   </style>
 </head>
@@ -51,22 +61,49 @@
 <nav class="navbar navbar-inverse navbar-fixed-top navbar-trans">
   <div class="container-fluid">
     <ul class="nav navbar navbar-center">
-      <li><a class="active nav-item" href="#home" class="active">HOME</a></li>
-      <li><a class="nav-item" href="/countdown.html">COUNTDOWN</a></li>
+      <li><a class="active nav-item" href="/index.html">HOME</a></li>
+      <li><a class="nav-item" href="/countdown.html" class="active">COUNTDOWN</a></li>
       <li><a class="nav-item" href="#contact">NEWS</a></li>
       <li><a class="nav-item" href="#about">LOCATION</a></li>
     </ul>
   </div>
 </nav>
-
-<div class="container-1 col-sm-12 text-center">
-<h1 style="letter-spacing: .1em;font-size: 110px; font-family: Montserrat;padding-top: 40px;">#FIREZACH</h1>
-<h3 style="font-family: Montserrat; font-size: 40px; padding-top: 40px;">HE'S THE WORST</h3>
-<h2></h2>
-
-<p style="padding-top: 40px; font-family: Montserrat">It's been too long since he's been fired</p>
+<div style="padding-top: 85px">
 </div>
+<div class="container col-sm-12 text-center">
+<h3 style="font-family: Montserrat; font-size: 60px; padding-bottom: 40px;">Days Since Zach Should Have Been Fired</h3>
+<p style="font-size: 50px" id="countdown"></p>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Oct 1, 2017 00:00:00").getTime();
 
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = (countDownDate - now) * -1;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+</div>
 
 </body>
 </html>
