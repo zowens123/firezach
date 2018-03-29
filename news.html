@@ -72,38 +72,7 @@
   <img src="https://raw.githubusercontent.com/zowens123/firezach/master/fz-black.png" alt="#firezach" style="width:250px;height:238px;">
 </div>
 <div class="container col-sm-12 text-center">
-<h3 style="font-family: Montserrat; font-size: 60px; padding-bottom: 40px;">Days Since Zach<br>Should Have Been Fired</h3>
-<p style="font-size: 50px; font-family: Montserrat" id="countdown"></p>
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Oct 1, 2017 00:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-    // Get todays date and time
-    var now = new Date().getTime();
-    
-    // Find the distance between now an the count down date
-    var distance = (countDownDate - now) * -1;
-    
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    // Output the result in an element with id="demo"
-    document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
-    
-    // If the count down is over, write some text 
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "EXPIRED";
-    }
-}, 1000);
-</script>
+<h4 style="font-family: Montserrat; font-size: 40px; padding-bottom: 40px;">This Page keeps us up to date<br>on whether Zach will be fired!</h4><br> <div style="font-size: 25px; font-family: Montserrat;">Fingerscrossed it is soon.</div>
 </div>
 
 </body>
