@@ -12,6 +12,22 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <style>
 
+  .bgimage {
+    background-image: url(pic2.jpg);
+    background-size: cover;
+  }
+
+  .overlay:before{
+    position: absolute;
+    content:" ";
+    width:100%;
+    height:100%;
+    display: block;
+    z-index:0;
+    background-color: #262525;
+    opacity: .7;
+  }
+
   .navbar {
       font-family: Raleway, sans-serif;
       margin-bottom: 0;
@@ -35,19 +51,20 @@
   .nav-item {
     margin-top: .3rem;
     margin-left: 2rem;
-    color: #383736;
+    color: #bcbcbc;
     }
 
   .container-1 {
       padding: 100px 100px;
+      color: #ffffff;
   }
 
   </style>
 </head>
-<body>
+<body class="bgimage overlay">
   <div class="alert alert-warning text-center">
   <strong>FYI!</strong> This page is actually under construction
-</div>
+  </div>
 <nav class="navbar navbar-inverse navbar-fixed-top navbar-trans">
   <div class="container-fluid">
     <ul class="nav navbar navbar-center">
