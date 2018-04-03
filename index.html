@@ -26,6 +26,7 @@
     z-index:0;
     background-color: #262525;
     opacity: .7;
+    overflow-y: scroll;
   }
 
   .navbar {
@@ -47,12 +48,15 @@
   .navbar-trans {
      background: transparent;
      }
-
-  .nav-item {
-    margin-top: .3rem;
-    margin-left: 2rem;
+  ul.nav li a {
+    display: block;
     color: #bcbcbc;
-    }
+    padding: 8px 17px;
+    text-decoration: none;
+  }
+    ul.nav li a:hover {
+    color: #efa33e;
+  }
 
   .container-1 {
       color: #ffffff;
@@ -84,7 +88,6 @@
 
 <p style="padding-top: 20px; font-family: Montserrat">It's been too long since he's been fired</p>
 </div>
-
 
 </body>
 </html>
