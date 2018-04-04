@@ -12,10 +12,27 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <style>
 
+  .bgimage {
+    background-image: url(pic1.jpg);
+    background-size: cover;
+  }
+
+  .overlay:before{
+    position: absolute;
+    content:" ";
+    width:100%;
+    height:100%;
+    display: block;
+    z-index:0;
+    background-color: #7f3b19;
+    opacity: .75;
+    overflow-y: scroll;
+  }
+
   .navbar {
       font-family: Raleway, sans-serif;
       margin-bottom: 0;
-      background-color: transparent;
+      background-git color: transparent;
       border: 0;
       font-size: 14px !important;
       letter-spacing: 4px;
@@ -31,19 +48,22 @@
   .navbar-trans {
      background: transparent;
      }
+  ul.nav li a {
+    display: block;
+    color: #bcbcbc;
+    padding: 8px 17px;
+    text-decoration: none;
+  }
+    ul.nav li a:hover {
+    color: #efa33e;
+  }
 
-  .nav-item {
-    margin-top: .3rem;
-    margin-left: 2rem;
-    color: #383736;
-    }
-
-  .container-2 {
-      padding: 150px 100px;
+  ul.nav li a.active {
+      color: #fff !important;
   }
 
   .container-1 {
-      padding: 80px 100px;
+      color: #ffffff;
   }
 
   .countdown {
@@ -54,26 +74,26 @@
 
   </style>
 </head>
-<body>
+<body class="bgimage overlay">
   <div class="alert alert-warning text-center">
   <strong>FYI!</strong> This page is actually under construction
 </div>
 <nav class="navbar navbar-inverse navbar-fixed-top navbar-trans">
   <div class="container-fluid">
     <ul class="nav navbar navbar-center">
-      <li><a class="active nav-item" href="https://zowens123.github.io/firezach">HOME</a></li>
-      <li><a class="nav-item" href="https://zowens123.github.io/firezach/countdown" class="active">COUNTDOWN</a></li>
+      <li><a class="nav-item" href="https://zowens123.github.io/firezach">HOME</a></li>
+      <li><a class="active nav-item" href="https://zowens123.github.io/firezach/countdown">COUNTDOWN</a></li>
       <li><a class="nav-item" href="https://zowens123.github.io/firezach/news">NEWS</a></li>
       <li><a class="nav-item" href="https://zowens123.github.io/firezach/location">LOCATION</a></li>
     </ul>
   </div>
 </nav>
 <div class="container-1 col-sm-12 text-center" style="padding-top: 40px">
-  <img src="https://raw.githubusercontent.com/zowens123/firezach/master/fz-black.png" alt="#firezach" style="width:250px;height:238px;">
+  <img src="https://raw.githubusercontent.com/zowens123/firezach/master/fz-white.png" alt="#firezach" style="width:250px;height:238px;">
 </div>
 <div class="container col-sm-12 text-center">
-<h3 style="font-family: Montserrat; font-size: 60px; padding-bottom: 40px;">Days Since Zach<br>Should Have Been Fired</h3>
-<p style="font-size: 50px; font-family: Montserrat" id="countdown"></p>
+<h3 style="font-family: Montserrat; font-size: 55px; padding-top: 40px; padding-bottom: 40px; color: #d1ac64;">Days Since Zach<br> Should Have Been Fired</h3>
+<p style="font-size: 60px; font-family: Montserrat;color: #d1ac64;" id="countdown"></p>
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Oct 1, 2017 00:00:00").getTime();
