@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -24,8 +24,8 @@
     height:100%;
     display: block;
     z-index:0;
-    background-color: #7f3b19;
-    opacity: .75;
+    background-color: #5E2E15;
+    opacity: .85;
     overflow-y: scroll;
   }
 
@@ -62,9 +62,43 @@
       color: #fff !important;
   }
 
-  .container-1 {
+  .container {
       color: #d1ac64;
   }
+
+  #blog {
+    padding-top: 40px;
+  }
+
+  .entry {
+    color: #C3BC8D;
+    font: Raleway;
+    font-size: 24px;
+    padding-top: 10px;
+  }
+  .header {
+    font-family: Montserrat:700;
+    color: #9b6a0f;
+    padding-top: 10px;
+  }
+
+@media screen and (max-width: 900px) {
+    ul.navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    ul.navbar li a {
+        float: left;
+        padding: 15px;
+    }
+
+  @media screen and (max-width: 400px) {
+    ul.navbar li a {
+        text-align: center;
+        float: none;
+    }
+}
 
   </style>
 </head>
@@ -85,9 +119,47 @@
 <div class="container col-sm-12 text-center" style="padding-top: 40px">
   <img src="https://raw.githubusercontent.com/zowens123/firezach/master/fz-white.png" alt="#firezach" style="width:250px;height:238px;">
 </div>
-<div class="container-1 col-sm-12 text-center">
-<h4 style="font-family: Montserrat; font-size: 40px; padding-bottom: 40px;">This Page keeps us up to date<br>on whether Zach will be fired!</h4><br> <div style="font-size: 25px; font-family: Montserrat;">Fingerscrossed it is soon.</div>
+<div class="container col-sm-6 text-center">
+<h4 style="font-family: Montserrat; font-size: 35px; padding-top: 40px;padding-bottom: 20px;">This Page keeps us up to date on whether Zach will be fired!</h4><br> <div style="font-size: 25px; font-family: Montserrat;">Fingerscrossed it is soon.</div>
 </div>
+<div id="blog">
+      <div class="container col-sm-6"><hr>
+      <h1 class="header">
+        <strong>APRIL UPDATE</strong>
+      </h1>
+      <p class="entry">Wow, it has been some time since the last update. Surprisingly there is no new news on whether Zach will be fired or not. At this point its uncertain if that will happen. Hopefully the resurrection of this site will do the trick.. spread the word so we can #firezach
+  </div>
+      <div class="container col-sm-6">
+      <hr style="background-color: #9b6a0f">
+      <h1 class="header">
+        <strong>WEEK OF OCT 23</strong>
+      </h1>
+      <p class="entry">Mediocre news update: It's been 22 long days since Zach should have been fired. Rumors have surfaced Zach was so close to being fired that a celebration was scheduled to commemorate such a momentous occasion. As we know now that is simply not the case. He still has a job - gross. Someday. Some. Day.  
+      </p>
+  </div>
+    <div class="container col-sm-6">
+    <hr style="background-color: #9b6a0f">
+      <h1 class="header">
+        <strong>WEEK OF OCT 16</strong>
+      </h1>
+      <p class="entry">Still no news to report.. ugh Zach still has a job. Though rumor has surfaced they may fire him to hire him and turn around and fire him again #firezach </p>
+  </div>
+  <div class="container col-sm-6">
+    <hr style="background-color: #9b6a0f">
+      <h1 class="header">
+        <strong>WEEK OF OCT 9</strong>
+      </h1>
+      <p class="entry">Nothing new to report.. he still has a job</p>
+  </div>
+  <div class="container entry col-sm-6">
+    <hr style="background-color: #9b6a0f">
+      <h1 class="header">
+        <strong>WEEK OF OCT 2</strong>
+      </h1>
+      <p class="entry">Reports surface Zach might finally be fired</p>
+  </div>
+</div>
+<div class="footer" style="padding-top: 90px;">
 
 </body>
 </html>

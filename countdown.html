@@ -24,8 +24,8 @@
     height:100%;
     display: block;
     z-index:0;
-    background-color: #7f3b19;
-    opacity: .75;
+    background-color: #5E2E15;
+    opacity: .85;
     overflow-y: scroll;
   }
 
@@ -62,9 +62,43 @@
       color: #fff !important;
   }
 
-  .container-1 {
-      color: #ffffff;
+  .container {
+      color: #d1ac64;
   }
+
+  #blog {
+    padding-top: 40px;
+  }
+
+  .entry {
+    color: #C3BC8D;
+    font: Raleway;
+    font-size: 24px;
+    padding-top: 10px;
+  }
+  .header {
+    font-family: Montserrat:700;
+    color: #9b6a0f;
+    padding-top: 10px;
+  }
+
+@media screen and (max-width: 900px) {
+    ul.navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    ul.navbar li a {
+        float: left;
+        padding: 15px;
+    }
+
+  @media screen and (max-width: 400px) {
+    ul.navbar li a {
+        text-align: center;
+        float: none;
+    }
+}
 
   .countdown {
   text-align: center;
