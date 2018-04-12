@@ -97,10 +97,11 @@
         float: none;
     }
 }
+
 #map {
     width: 100%;
     height: 400px;
-    -webkit-filter: grayscale(100%); 
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
 }
 
@@ -148,25 +149,25 @@
   </div>
   <script>
 function myMap() {
-  var amsterdam = new google.maps.LatLng(41.291,-96.22);
+  var omaha = new google.maps.LatLng(41.291,-96.22);
 
   var mapCanvas = document.getElementById("map");
-  var mapOptions = {center: amsterdam, zoom: 7};
+  var mapOptions = {center: omaha, zoom: 7};
   var map = new google.maps.Map(mapCanvas,mapOptions);
 
   var myCity = new google.maps.Circle({
-    center: amsterdam,
+    center: omaha,
     radius: 50000,
-    strokeColor: "#0000FF",
+    strokeColor: "#a4a4a5",
     strokeOpacity: 0.8,
     strokeWeight: 2,
-    fillColor: "#0000FF",
+    fillColor: "#a4a4a5",
     fillOpacity: 0.4
   });
   myCity.setMap(map);
 }
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxSz_qqbBr9LvISR8bUJp4TvnI-9KqYhQ&callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3hz2tI0yDJZ1QObLpi63GNlto4CmhUng&callback=myMap"></script>
 </body>
 </html>
