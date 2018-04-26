@@ -101,6 +101,35 @@
 }
 
   </style>
+  <script type="text/javascript">
+
+    var todos = new Array();
+
+    window.onload = init;
+
+    function init() {
+      var submitButton = document.getElementById("submit");
+      submitButton.onclick = getFormData;
+    }
+
+    function getFormData() {
+      var name = document.getElementById("name").value;
+      if (checkInputTask(name, "Please enter your name")) return;
+
+      var comment = document.getElementById("comment").value;
+      if (checkInputTask(comment, "Don't forget, enter your disdain here")) return;
+
+      console.log("Name: " + name + " comment: " + comment);
+    }
+
+    function checkInputTask(value, msg) {
+      if (value == null || value == "") {
+          alert(msg);
+          return true;
+      }
+      return false;
+    }
+  </script>
 </head>
 <body class="bgimage overlay">
   <div class="alert alert-warning text-center">
@@ -167,15 +196,15 @@
   </div>
   <form>
     <div class="form-group col-sm-6">
-      <label for="usr">Name:</label>
-      <input type="text" class="form-control" id="usr">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="name">
     </div>
   <div class="form-group col-sm-6">
     <label for="comment">Comment:</label>
-    <textarea class="form-control" rows="5" id="comment"></textarea>
+    <textarea class="form-control" rows="5" id="comment" placeholder="zach is the worst. literally my mortal enemy"></textarea>
   </div>
   <div style="padding-left: 70px; padding-top: 20px;"> 
-  <input type="submit button" onclick="alert('Not Submitted: working on submiting text!')" value="Submit" class="btn btn-primary col-sm-4" style="z-index: 2;"></input>
+  <input type="submit button" id="submit" onclick="alert('Not Submitted: working on submiting text!')" value="Submit" class="btn btn-primary col-sm-4" style="z-index: 2;"></input>
   </form>
 </div>
 </div>
