@@ -1,6 +1,6 @@
 <?php
 
-if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gp()) {
+if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) {
 	function strip_slashes($input) {
 		if (!is_array($input)) {
 			return stripslashes($input);
