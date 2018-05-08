@@ -106,7 +106,6 @@
     function ToDo(name, comment) {
       this.name = name;
       this.comment = comment;
-      this.done = false;
     }
 
     var todos = new Array();
@@ -144,7 +143,7 @@
       var request = new XMLHttpRequest();
       var URL = "save.php?data=" + encodeURI(todoJSON);
       request.open("GET", URL);
-      request.setRequestHeader("Content-Type", "text/plain;charset=utf-8")
+      request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
       request.send();
     }
   </script>
