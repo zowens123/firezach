@@ -103,6 +103,12 @@
   </style>
   <script type="text/javascript">
 
+    function ToDo(name, comment) {
+      this.name = name;
+      this.comment = comment;
+      this.done = false;
+    }
+
     var todos = new Array();
 
     window.onload = init;
@@ -120,6 +126,9 @@
       if (checkInputTask(comment, "Don't forget, enter your disdain here")) return;
 
       console.log("Name: " + name + " comment: " + comment);
+      var todoItem = new ToDo(name, comment);
+      todos.push(todoItem);
+      saveTodoData();
     }
 
     function checkInputTask(value, msg) {
@@ -128,6 +137,15 @@
           return true;
       }
       return false;
+    }
+
+    function saveTodoData() {
+      var todoJSON = JSON.stringify(todos);
+      var request = new XMLHttpRequest();
+      var URL = "save.php?data=" + encodeURI(todoJSON);
+      request.open("GET", URL);
+      request.setRequestHeader("Content-Type", "text/plain;charset=utf-8")
+      request.send();
     }
   </script>
 </head>
