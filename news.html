@@ -151,7 +151,7 @@
     function saveTodoData() {
       var todoJSON = JSON.stringify(todos);
       var request = new XMLHttpRequest();
-      var URL = "/save.php?data=" + encodeURI(todoJSON);
+      var URL = "/firezach/save.php?data=" + encodeURI(todoJSON);
       request.open("GET", URL);
       request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
       request.send();
@@ -159,9 +159,6 @@
   </script>
 </head>
 <body class="bgimage overlay">
-  <div class="alert alert-warning text-center">
-  <strong>FYI!</strong> This page is actually under construction
-</div>
 <nav class="navbar navbar-inverse navbar-fixed-top navbar-trans">
   <div class="container-fluid">
     <ul class="nav navbar navbar-center">
@@ -228,7 +225,7 @@
     </div>
   <div class="form-group col-sm-6">
     <label for="comment">Comment:</label>
-    <textarea class="form-control" rows="5" id="comment" placeholder="zach is the worst. literally my mortal enemy"></textarea>
+    <textarea class="form-control" rows="5" id="comment" placeholder="This section still under construction. Enter your disdain and check the console log in inspector tools"></textarea>
   </div>
   <div style="padding-left: 70px; padding-top: 20px;"> 
   <input type="submit button" id="submit" onclick="alert('Not Submitted: working on submiting text!')" value="Submit" class="btn btn-primary col-sm-4" style="z-index: 2;"></input>
