@@ -24,7 +24,7 @@ set_error_handler("customError");
 
 $myData = $_GET["data"];
 
-$myFile = "/firezach/comments.json";
+$myFile = "comments.json";
 $fileHandle = fopen($myFile, "a");
 
 fwrite($fileHandle, $myData);
