@@ -25,7 +25,7 @@ set_error_handler("customError");
 $myData = $_GET["data"];
 
 $myFile = "comments.json";
-$fileHandle = fopen($myFile, "w");
+$fileHandle = fopen($myFile, "a");
 
 fwrite($fileHandle, $myData);
 fclose($fileHandle);
