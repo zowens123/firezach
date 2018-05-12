@@ -151,7 +151,7 @@
     function saveTodoData() {
       var todoJSON = JSON.stringify(todos);
       var request = new XMLHttpRequest();
-      var URL = "firezach/save.php?data=" + encodeURI(todoJSON);
+      var URL = "/firezach/save.php?data=" + encodeURI(todoJSON);
       request.open("GET", URL);
       request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
       request.send();
@@ -165,10 +165,10 @@
 <nav class="navbar navbar-inverse navbar-fixed-top navbar-trans">
   <div class="container-fluid">
     <ul class="nav navbar navbar-center">
-      <li><a class="nav-item" href="firezach/index.html">HOME</a></li>
-      <li><a class="nav-item" href="firezach/countdown.html">COUNTDOWN</a></li>
-      <li><a class="active nav-item" href="firezach/news.html">NEWS</a></li>
-      <li><a class="nav-item" href="firezach/location.html">LOCATION</a></li>
+      <li><a class="nav-item" href="/firezach/index.html">HOME</a></li>
+      <li><a class="nav-item" href="/firezach/countdown.html">COUNTDOWN</a></li>
+      <li><a class="active nav-item" href="/firezach/news.html">NEWS</a></li>
+      <li><a class="nav-item" href="/firezach/location.html">LOCATION</a></li>
     </ul>
   </div>
 </nav>
