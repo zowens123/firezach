@@ -151,7 +151,7 @@
     function saveTodoData() {
       var todoJSON = JSON.stringify(todos);
       var request = new XMLHttpRequest();
-      var URL = "/save.php?data=" + encodeURI(todoJSON);
+      var URL = "save.php?data=" + encodeURI(todoJSON);
       request.open("GET", URL);
       request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
       request.send();
